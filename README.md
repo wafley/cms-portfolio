@@ -1,120 +1,114 @@
 # Portfolio CMS - CodeIgniter 4
 
-Website portfolio pribadi yang dilengkapi dengan **Content Management System (CMS)** untuk mengelola konten seperti profil, proyek, blog, dan lainnya. Project ini dibangun menggunakan **CodeIgniter 4** dan ditujukan agar mudah dikembangkan serta terbuka untuk kontribusi.
+A personal portfolio website equipped with a **Content Management System (CMS)** to manage content such as profile, projects, blog posts, and more. This project is built using **CodeIgniter 4** and is designed to be easy to extend and open for contributions.
 
 ![GitHub stars](https://img.shields.io/github/stars/wafley/cms-portfolio)
 ![GitHub license](https://img.shields.io/github/license/wafley/cms-portfolio)
 ![Build Status](https://img.shields.io/github/actions/workflow/status/wafley/cms-portfolio/main.yml)
 
-## Fitur Utama
+## Main Features
 
--   Manajemen konten portfolio (CRUD)
--   Dashboard admin
--   Autentikasi & otorisasi
--   Manajemen proyek / pengalaman
--   Manajemen artikel / blog
--   Responsive design
--   CMS berbasis CodeIgniter 4
+* Portfolio content management (CRUD)
+* Admin dashboard
+* Authentication & authorization
+* Project / experience management
+* Article / blog management
+* Responsive design
+* CMS based on CodeIgniter 4
 
-## Teknologi yang Digunakan
+## Technologies Used
 
--   **Backend**: CodeIgniter 4
--   **Frontend**: Untuk admin (Azira) dan untuk public (FolioOne)
--   **Database**: MySQL / MariaDB
--   **Auth**: Session CI4
+* **Backend**: CodeIgniter 4
+* **Frontend**: Admin (Azira) and Public (FolioOne)
+* **Database**: MySQL / MariaDB
+* **Auth**: CI4 Session
 
-## Persyaratan Sistem
+## System Requirements
 
-Pastikan environment Anda memenuhi syarat berikut:
+Make sure your environment meets the following requirements:
 
--   PHP >= 8.0
--   Composer
--   Web Server (Apache / Nginx)
--   MySQL / MariaDB
--   Git
+* PHP >= 8.0
+* Composer
+* Web Server (Apache / Nginx)
+* MySQL / MariaDB
+* Git
 
-## Panduan Instalasi
+## Installation Guide
 
 ### 1. Clone Repository
 
 ```bash
 git clone https://github.com/username/portfolio-ci4.git
 cd portfolio-ci4
-
 ```
 
-### 2. Install Dependency
+### 2. Install Dependencies
 
 ```bash
 composer install
-
 ```
 
-### 3. Salin File Environment
+### 3. Copy Environment File
 
 ```bash
 cp env .env
-
 ```
 
-### 4. Setup Assets (Penting)
+### 4. Setup Assets (Important)
 
-Karena aset gambar dan library frontend tidak disimpan di repositori Git, Anda perlu mengunduhnya secara manual:
+Since image assets and frontend libraries are not included in the Git repository, you need to download them manually:
 
-1. **Unduh Assets**: Buka link Google Drive berikut: [`https://drive.google.com/file/d/1O7-cqbjOU7Kpp2KeVDh4-ypjGk6YMAYU/view?usp=sharing`](<https://www.google.com/search?q=%5Bhttps://drive.google.com/file/d/1O7-cqbjOU7Kpp2KeVDh4-ypjGk6YMAYU/view%3Fusp%3Dsharing%5D(https://drive.google.com/file/d/1O7-cqbjOU7Kpp2KeVDh4-ypjGk6YMAYU/view%3Fusp%3Dsharing)>)
-2. **Ekstrak File**: Ekstrak file `.zip` yang telah diunduh.
-3. Pindahkan/copy folder hasil ekstrak tersebut ke dalam direktori: `public/assets/`
+1. **Download Assets**: Open the following Google Drive link:
+   [https://drive.google.com/file/d/1O7-cqbjOU7Kpp2KeVDh4-ypjGk6YMAYU/view?usp=sharing](https://drive.google.com/file/d/1O7-cqbjOU7Kpp2KeVDh4-ypjGk6YMAYU/view?usp=sharing)
+2. **Extract File**: Extract the downloaded `.zip` file
+3. Move/copy the extracted folder into: `public/assets/`
 
-### 5. Konfigurasi File `.env`
+### 5. Configure `.env` File
 
-Buka file `.env` dan sesuaikan konfigurasi database Anda.
+Open the `.env` file and adjust the database configuration according to your setup.
 
 ### 6. Generate Application Key
 
 ```bash
 php spark key:generate
-
 ```
 
-### 7. Migrasi Database
+### 7. Run Database Migration
 
 ```bash
 php spark migrate
-
 ```
 
-### 8. Jalankan Seeder (Wajib)
+### 8. Run Seeder (Required)
 
-Menjalankan seeder sangat penting untuk inisialisasi data awal (seperti akun admin dan pengaturan situs). Tanpa langkah ini, Anda tidak akan bisa login ke dashboard.
+Running the seeder is very important to initialize the initial data (such as admin account and site settings). Without this step, you will not be able to log in to the dashboard.
 
 ```bash
 php spark db:seed DatabaseSeeder
-
 ```
 
-> **Catatan:** Data awal (email, password, dll) yang dimasukkan melalui seeder dapat Anda ubah sesuai kebutuhan pada file `app/Database/Seeds/UserSeeder.php` sebelum menjalankan perintah di atas.
+> **Note:** The default data (email, password, etc.) inserted by the seeder can be modified in `app/Database/Seeds/UserSeeder.php` before running the command above.
 
-### 9. Jalankan Development Server
+### 9. Run Development Server
 
 ```bash
 php spark serve
-
 ```
 
-Akses melalui: `http://localhost:8080`
+Access via: `http://localhost:8080`
 
 ---
 
-## Akun Admin Default
+## Default Admin Account
 
-Setelah menjalankan seeder, gunakan kredensial berikut:
+After running the seeder, use the following credentials:
 
--   **Username**: `admin`
--   **Password**: `12345678`
+* **Username**: `admin`
+* **Password**: `12345678`
 
-> **Penting:** Segera ubah password dan data profil melalui dashboard admin setelah login pertama kali.
+> **Important:** Immediately change the password and profile data through the admin dashboard after your first login.
 
-## Struktur Folder Penting
+## Important Folder Structure
 
 ```text
 app/
@@ -122,23 +116,22 @@ app/
 ├── Controllers/
 ├── Database/
 │   ├── Migrations/
-│   └── Seeds/      <-- Tempat modifikasi data awal (seeder)
+│   └── Seeds/      <-- Initial data modification (seeder)
 ├── Models/
 ├── Views/
 public/
 ├── assets/
-
 ```
 
-### 🤝 Contributing
+## 🤝 Contributing
 
-Kontribusi sangat terbuka! Silakan buat issue atau pull request.
-Semua kontribusi, sekecil apa pun, sangat dihargai ❤️
+Contributions are very welcome! Feel free to create issues or pull requests.
+Any contribution, no matter how small, is greatly appreciated ❤️
 
-## Lisensi
+## License
 
-Project ini menggunakan lisensi **MIT License**.
+This project uses the **MIT License**.
 
 ---
 
-⭐ Jangan lupa star repo ini agar project ini terus berkembang!
+⭐ Don’t forget to star this repository to support its development!
