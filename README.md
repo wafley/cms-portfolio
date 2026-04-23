@@ -2,9 +2,15 @@
 
 A personal portfolio website equipped with a **Content Management System (CMS)** to manage content such as profile, projects, blog posts, and more. This project is built using **CodeIgniter 4** and is designed to be easy to extend and open for contributions.
 
-![GitHub stars](https://img.shields.io/github/stars/wafley/cms-portfolio)
-![GitHub license](https://img.shields.io/github/license/wafley/cms-portfolio)
-![Build Status](https://img.shields.io/github/actions/workflow/status/wafley/cms-portfolio/main.yml)
+![Version](https://img.shields.io/github/v/release/wafley/cms-portfolio)
+![License](https://img.shields.io/github/license/wafley/cms-portfolio)
+![Issues](https://img.shields.io/github/issues/wafley/cms-portfolio)
+![Pull Requests](https://img.shields.io/github/issues-pr/wafley/cms-portfolio)
+![Last Commit](https://img.shields.io/github/last-commit/wafley/cms-portfolio)
+![CodeIgniter](https://img.shields.io/badge/framework-CodeIgniter-red)
+![Code Size](https://img.shields.io/github/languages/code-size/wafley/cms-portfolio)
+![Contributors](https://img.shields.io/github/contributors/wafley/cms-portfolio)
+[![Follow @wafley](https://img.shields.io/badge/Follow-%40wafley-blue?style=social&logo=github)](https://github.com/wafley)
 
 ## Main Features
 
